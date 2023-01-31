@@ -11,12 +11,25 @@ You can install Neovim with the package manager. However, those tend to be behin
 I recomend installing the latest version with the following.
 
 ```shell
-
+curl -OL https://github.com/neovim/neovim/releases/download/stable/nvim-linux64.deb
+sudo dpkg -i nvim-linux64.deb
+python3 -m pip install pynvi
+python3 -m pip install neovim
 ```
 
 ### Dependancies
 
+- packer
+```shell
+git clone --depth 1 https://github.com/wbthomason/packer.nvim\
+ ~/.local/share/nvim/site/pack/packer/start/packer.nvim
+```
+
 - ripgrep
+```shell
+sudo apt update
+sudo apt install -y ripgrep
+```
 
 - gcc
 
@@ -25,6 +38,12 @@ I recomend installing the latest version with the following.
 - clang
 
 - npm
+
+```shell
+sudo apt update
+curl -fsSL https://deb.nodesource.com/setup_19.x | sudo -E bash - &&\
+sudo apt-get install -y nodejs npm
+```
 
 You will need ripgrep installed for fuzzy finding and other searches.
 LSP will need gcc, clang, and g++ to compile.
@@ -47,3 +66,9 @@ to replace all instance of a string on a line
 wV:s/string/nstring/g
 
 use mason to search for language servers to add `i` to install
+
+Install plug packages
+
+```shell
+nvim --headless +PackerSync +qa
+```
