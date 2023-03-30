@@ -34,7 +34,10 @@ return require('packer').startup(function(use)
 		  {'hrsh7th/cmp-nvim-lua'},
 
 		  -- Snippets
-		  {'L3MON4D3/LuaSnip'},
+		  {'L3MON4D3/LuaSnip',
+            tag = 'v<CurrentMajor>',
+            run = "make install_jsregrep"
+          },
 		  {'rafamadriz/friendly-snippets'},
 	  }
   }
@@ -45,4 +48,5 @@ return require('packer').startup(function(use)
       },
       tag = 'nightly' -- optional, updated every week. (see issue #1193)
   }
+  use("github/copilot.vim")
 end)
