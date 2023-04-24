@@ -38,7 +38,7 @@ vim.keymap.set("n", "Q", "<nop>")
 
 -- This lets you switch projects. However, I do not use tmux. Might consider
 -- removing this if not going to use.
-vim.keymap.set("n", "<C-f>", "<cmd>silent !tmux neww tmux-sessionizer<CR>")
+-- vim.keymap.set("n", "<C-f>", "<cmd>silent !tmux neww tmux-sessionizer<CR>")
 
 -- This uses LSP to format
 vim.keymap.set("n", "<leader>f", vim.lsp.buf.format)
