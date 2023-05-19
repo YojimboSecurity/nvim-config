@@ -48,6 +48,5 @@
       },
       tag = 'nightly' -- optional, updated every week. (see issue #1193)
   }
-  use("github/copilot.vim")
   use("psf/black")
 end)
