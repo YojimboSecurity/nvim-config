@@ -1,9 +1,9 @@
-    -- This file can be loaded by calling `lua require('plugins')` from your init.vim
+-- This file can be loaded by calling `lua require('plugins')` from your init.vim
 
-    -- Only required if you have packer configured as `opt`
-    vim.cmd.packadd('packer.nvim')
+-- Only required if you have packer configured as `opt`
+vim.cmd.packadd('packer.nvim')
 
-    return require('packer').startup(function(use)
+return require('packer').startup(function(use)
       -- Packer can manage itself
       use 'wbthomason/packer.nvim'
   use {
@@ -35,7 +35,7 @@
 
 		  -- Snippets
 		  {'L3MON4D3/LuaSnip',
-            tag = 'v<CurrentMajor>',
+            tag = '2.*',
             run = "make install_jsregrep"
           },
 		  {'rafamadriz/friendly-snippets'},

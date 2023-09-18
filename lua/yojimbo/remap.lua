@@ -1,4 +1,6 @@
 vim.g.mapleader = " "
+
+-- This exits the file and takes you back to the directory
 vim.keymap.set("n", "<leader>pv", vim.cmd.Ex)
 
 
