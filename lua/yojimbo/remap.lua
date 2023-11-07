@@ -3,7 +3,6 @@ vim.g.mapleader = " "
 -- This exits the file and takes you back to the directory
 vim.keymap.set("n", "<leader>pv", vim.cmd.Ex)
 
-
 -- This lets you move the highlited area up and down.
 vim.keymap.set("v", "J", ":m '>+1<CR>gv=gv")
 vim.keymap.set("v", "K", ":m '<-2<CR>gv=gv")
@@ -20,16 +19,15 @@ vim.keymap.set("n", "<C-u>", "<C-u>zz")
 vim.keymap.set("n", "n", "nzzzv")
 vim.keymap.set("n", "N", "Nzzzv")
 
-
 -- This allows you to paste and not lose the content in the buffer.
 vim.keymap.set("x", "<leader>p", [["_dP]])
 
 -- This allows you copy to the clipboard
-vim.keymap.set({ "n", "v" }, "<leader>y", [["+y]])
+vim.keymap.set({"n", "v"}, "<leader>y", [["+y]])
 vim.keymap.set("n", "<leader>Y", [["+Y]])
 
 -- This delets to void in normal mode or visual mode
-vim.keymap.set({ "n", "v" }, "<leader>d", [["_d]])
+vim.keymap.set({"n", "v"}, "<leader>d", [["_d]])
 
 -- This maps ctrl-c to Esc. This is nice when we connent out a block of code.
 -- We can just use the normal ctrl-c rather than having to remembered to use
@@ -52,7 +50,8 @@ vim.keymap.set("n", "<leader>k", "<cmd>lnext<CR>zz")
 vim.keymap.set("n", "<leader>j", "<cmd>lprev<CR>zz")
 
 -- This lets you replace the word you are on.
-vim.keymap.set("n", "<leader>s", [[:%s/\<<C-r><C-w>\>/<C-r><C-w>/gI<Left><Left><Left>]])
+vim.keymap.set("n", "<leader>s",
+               [[:%s/\<<C-r><C-w>\>/<C-r><C-w>/gI<Left><Left><Left>]])
 
 -- This turns the file you are working on into an executable file
-vim.keymap.set("n", "<leader>x", "<cmd>!chmod +x %<CR>", { silent = true })
+vim.keymap.set("n", "<leader>x", "<cmd>!chmod +x %<CR>", {silent = true})
